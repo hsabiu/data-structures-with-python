@@ -1,4 +1,5 @@
-# data-structures-with-python
+# Data Structures With Python
+====================================================
 
 Implementations of various data structures in python 
 
