@@ -1,12 +1,12 @@
 import unittest
-from LinkList import SinglyLinkList, DoublyLinkList
+from LinkedList import SinglyLinkedList, DoublyLinkedList
 
 
 class TestSinglyLinkList(unittest.TestCase):
     # Class to test the implementation of a singly link list
 
     def setUp(self):
-        self.link_list = SinglyLinkList()
+        self.link_list = SinglyLinkedList()
         self.link_list.insert(1)
         self.link_list.insert(2)
         self.link_list.insert(3)

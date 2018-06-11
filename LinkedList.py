@@ -20,7 +20,7 @@ class Node:
         return self.next
 
 
-class SinglyLinkList:
+class SinglyLinkedList:
     def __init__(self, head=None):
         self.head = head
 
@@ -67,14 +67,14 @@ class SinglyLinkList:
         raise ValueError("Data not in the list")
 
 
-class DoublyLinkList:
+class DoublyLinkedList:
     def __init__(self):
         pass
 
 
 if __name__ == '__main__':
 
-    test_list = SinglyLinkList()
+    test_list = SinglyLinkedList()
 
     test_list.insert(1)
     test_list.insert(2)

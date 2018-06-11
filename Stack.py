@@ -1,5 +1,5 @@
 # Python implementation of a Stack data structure
-from LinkList import SinglyLinkList
+from LinkedList import SinglyLinkedList
 
 
 class ArrayStack:
@@ -41,7 +41,7 @@ class LinkListStack:
 
     def __init__(self, capacity=1):
         self.capacity = capacity
-        self.linklist = SinglyLinkList()
+        self.linklist = SinglyLinkedList()
 
     def push(self, item):
         """Add item to the top of the stack"""
