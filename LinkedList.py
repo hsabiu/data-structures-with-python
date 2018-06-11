@@ -152,51 +152,71 @@ if __name__ == '__main__':
 
     print('Initializing a new linked list...')
     linkedlist = SinglyLinkedList()
+    print('')
 
-    print('Inserting 3 items in the initialized linked list...')
+    print('Inserting 3 items into the initialized linked list...')
     linkedlist.insert(1)
     linkedlist.insert(2)
     linkedlist.insert(3)
+    print('')
 
-    print('Finished inserting 3 elements... size of the linked list should be 3...')
+    print('3 items inserted... size of the linked list should be 3...')
     print('===> LinkedList size:', linkedlist.size())
+    print('')
 
     print('Searching for an item that exist in the linked list... ')
     print('Search should return a NodeSingle object...')
     print('===> Search returned:', linkedlist.search(1))
+    print('')
 
-    print('Deleting two elements from the list... size of the linked list should now be 1...')
+    print('Deleting two items from the list... size of the linked list should now be 1...')
     linkedlist.delete(1)
     linkedlist.delete(2)
     print('===> LinkedList size:', linkedlist.size())
 
     print('---------------------------------------------')
+
+    print('')
 
     print('---------- TEST DOUBLY LINKED LIST ----------')
 
     print('Initializing a new linked list...')
     linkedlist = DoublyLinkedList()
+    print('')
 
-    print('Inserting 3 items in the initialized linked list...')
+    print('Inserting 5 items into the initialized linked list...')
     linkedlist.insert(1)
     linkedlist.insert(2)
     linkedlist.insert(3)
+    linkedlist.insert(4)
+    linkedlist.insert(5)
+    print('')
 
-    print('Finished inserting 3 elements... size of the linked list should be 3...')
+    print('5 items inserted... size of the linked list should be 5...')
     print('===> LinkedList size:', linkedlist.size())
+    print('')
 
     print('Searching for an item that exist in the linked list... ')
     print('Search should return a NodeDouble object...')
-    print('===> Search returned:', linkedlist.search(2))
+    print('===> Search returned:', linkedlist.search(4))
+    print('')
 
-    print('Getting the next and previous data of the nodes pointed by the searched item...')
-    print('===> Searched item: 2')
-    print('===> Next data (should be 1):', linkedlist.search(2).get_next().get_data())
-    print('===> Previous data (should be 3):', linkedlist.search(2).get_previous().get_data())
+    print('Getting the data of the next and previous nodes pointed by the searched item...')
+    print('===> Searched item: 4')
+    print('===> Next data (should be 3):', linkedlist.search(4).get_next().get_data())
+    print('===> Previous data (should be 5):', linkedlist.search(4).get_previous().get_data())
+    print('')
 
-    print('Deleting two elements from the list... size of the linked list should now be 1...')
-    linkedlist.delete(1)
-    linkedlist.delete(2)
+    print('Deleting 1 item from the list... size of the linked list should now be 4...')
+    print('===> Item to delete: 3')
+    linkedlist.delete(3)
     print('===> LinkedList size:', linkedlist.size())
+    print('')
+
+    print('The previous node pointed by 2 should now be 4...')
+    print('===> Previous node pointed by 2:', linkedlist.search(2).get_previous().get_data())
+    print('The next node pointed by 4 should now be 2...')
+    print('===> Next node pointed by 4:', linkedlist.search(4).get_next().get_data())
 
     print('---------------------------------------------')
+
