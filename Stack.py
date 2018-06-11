@@ -10,14 +10,14 @@ class ArrayStack:
         self.array = []
 
     def push(self, item):
-        """Add item to the top of the stack, raise Exception if the stack is full"""
+        """Add item to the top of the stack, raise OverflowError if the stack is full"""
 
         if len(self.array) >= self.capacity:
             raise OverflowError("Stack overflow")
         self.array.append(item)
 
     def pop(self):
-        """Remove and return the item at the top of the stack, raise Exception if
+        """Remove and return the item at the top of the stack, raise OverflowError if
         the stack is empty"""
 
         if self.is_empty():
