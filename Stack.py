@@ -89,7 +89,7 @@ if __name__ == '__main__':
     print(f'Reversed word: {reversed_word}')
     print('--------------------------------------')
 
-    print("")
+    print('')
 
     print('------- TEST LINKED LIST STACK -------')
     # Use linked list stack data structure to reverse a word
