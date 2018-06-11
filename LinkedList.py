@@ -100,7 +100,22 @@ class SinglyLinkedList:
 
 class DoublyLinkedList:
     def __init__(self, head=None):
+        self.head = head
+
+    def insert(self, data):
+        """Insert data into the head of the link list"""
         pass
+
+    def delete(self, data):
+        """Delete data from the link list. Raise ValueError if data is not in the list"""
+        pass
+
+    def size(self):
+        """Return the number of items in the link list"""
+        pass
+
+    def search(self, data):
+        """Search the link list for data. If found, return the node, otherwise raise ValueError"""
 
 
 if __name__ == '__main__':
