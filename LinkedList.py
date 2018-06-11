@@ -74,20 +74,25 @@ class DoublyLinkedList:
 
 if __name__ == '__main__':
 
-    test_list = SinglyLinkedList()
+    print('---------- TEST SINGLY LINKED LIST ----------')
 
-    test_list.insert(1)
-    test_list.insert(2)
-    test_list.insert(3)
-    test_list.insert(4)
-    test_list.insert(5)
+    print('Initializing a new linked list...')
+    linkedlist = SinglyLinkedList()
 
-    print(test_list.size())
+    print('Inserting 3 element in the initialized linked list...')
+    linkedlist.insert(1)
+    linkedlist.insert(2)
+    linkedlist.insert(3)
 
-    print(test_list.search(1))
-    # print(test_list.search(10))
+    print('Finished inserting 3 elements... size of the linked list should be 3...')
+    print('LinkedList size:', linkedlist.size())
 
-    test_list.delete(1)
-    test_list.delete(5)
+    print('Searching for an element that exist in the linked list... search should return a Node object...')
+    print('Search returned:', linkedlist.search(1))
 
-    print(test_list.size())
+    print('Deleting two elements from the list... size of the linked list should now be 1...')
+    linkedlist.delete(1)
+    linkedlist.delete(2)
+    print('LinkedList size:', linkedlist.size())
+
+    print('---------------------------------------------')

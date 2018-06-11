@@ -36,17 +36,17 @@ class ArrayStack:
         return len(self.array) == 0
 
 
-class LinkListStack:
+class LinkedListStack:
     """Singly link list implementation of Stack data structure"""
 
     def __init__(self, capacity=1):
         self.capacity = capacity
-        self.linklist = SinglyLinkedList()
+        self.linkedlist = SinglyLinkedList()
 
     def push(self, item):
         """Add item to the top of the stack"""
 
-        self.linklist.insert(item)
+        self.linkedlist.insert(item)
 
     def pop(self):
         """Remove and return the item at the top of the stack, raise Exception if
@@ -54,8 +54,8 @@ class LinkListStack:
 
         if self.is_empty():
             raise OverflowError("Stack Underflow")
-        data = self.linklist.head.get_data()
-        self.linklist.delete(data)
+        data = self.linkedlist.head.get_data()
+        self.linkedlist.delete(data)
         return data
 
     def peek(self):
@@ -64,16 +64,16 @@ class LinkListStack:
 
         if self.is_empty():
             raise Exception("Stack Underflow")
-        return self.linklist.head.get_data()
+        return self.linkedlist.head.get_data()
 
     def is_empty(self):
-        return self.linklist.size() == 0
+        return self.linkedlist.size() == 0
 
 
 if __name__ == '__main__':
 
     print('---------- TEST ARRAY STACK ----------')
-    # Use a array stack data structure to reverse a word
+    # Use array stack data structure to reverse a word
     word = 'WORD'
     reversed_word = ''
 
@@ -91,13 +91,13 @@ if __name__ == '__main__':
 
     print("")
 
-    print('------- LINK LIST ARRAY STACK --------')
-    # Use a link list stack data structure to reverse a word
+    print('------- TEST LINKED LIST STACK -------')
+    # Use linked list stack data structure to reverse a word
     del reversed_word
     word = 'WORD'
     reversed_word = ''
 
-    stack = LinkListStack(len(word))
+    stack = LinkedListStack(len(word))
 
     for ch in word:
         stack.push(ch)

@@ -3,7 +3,7 @@ from LinkedList import SinglyLinkedList, DoublyLinkedList
 
 
 class TestSinglyLinkList(unittest.TestCase):
-    # Class to test the implementation of a singly link list
+    # Unit test cases for the implementation of singly linkedlist
 
     def setUp(self):
         self.link_list = SinglyLinkedList()
@@ -39,5 +39,5 @@ class TestSinglyLinkList(unittest.TestCase):
 
 
 class TestDoublyLinkList(unittest.TestCase):
-    # Class to test the implementation of a singly link list
+    # Unit test cases for the implementation of doubly linkedlist
     pass
