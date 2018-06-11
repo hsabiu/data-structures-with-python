@@ -104,18 +104,46 @@ class DoublyLinkedList:
 
     def insert(self, data):
         """Insert data into the head of the link list"""
-        pass
+        new_node = NodeDouble(data)
+        new_node.set_next(self.head)
+        if self.head:
+            self.head.set_previous(new_node)
+        self.head = new_node
 
     def delete(self, data):
         """Delete data from the link list. Raise ValueError if data is not in the list"""
-        pass
+        current_node = self.head
+        while current_node:
+            if current_node.get_data() == data:
+                break
+            current_node = current_node.get_next()
+
+        if current_node is None:
+            raise ValueError("Data not in the list")
+        else:
+            if current_node.get_next():
+                current_node.get_next().set_previous(current_node.get_previous())
+            if current_node.get_previous():
+                current_node.get_previous().set_next(current_node.get_next())
 
     def size(self):
         """Return the number of items in the link list"""
-        pass
+        counter = 0
+        current_node = self.head
+        while current_node:
+            counter = counter + 1
+            current_node = current_node.get_next()
+        return counter
 
     def search(self, data):
         """Search the link list for data. If found, return the node, otherwise raise ValueError"""
+        current_node = self.head
+        while current_node:
+            if current_node.get_data() == data:
+                return current_node
+            current_node = current_node.get_next()
+
+        raise ValueError("Data not in the list")
 
 
 if __name__ == '__main__':
@@ -125,7 +153,7 @@ if __name__ == '__main__':
     print('Initializing a new linked list...')
     linkedlist = SinglyLinkedList()
 
-    print('Inserting 3 element in the initialized linked list...')
+    print('Inserting 3 items in the initialized linked list...')
     linkedlist.insert(1)
     linkedlist.insert(2)
     linkedlist.insert(3)
@@ -133,9 +161,38 @@ if __name__ == '__main__':
     print('Finished inserting 3 elements... size of the linked list should be 3...')
     print('===> LinkedList size:', linkedlist.size())
 
-    print('Searching for an element that exist in the linked list... ')
-    print('Search should return a NodeSinglePonter object...')
+    print('Searching for an item that exist in the linked list... ')
+    print('Search should return a NodeSingle object...')
     print('===> Search returned:', linkedlist.search(1))
+
+    print('Deleting two elements from the list... size of the linked list should now be 1...')
+    linkedlist.delete(1)
+    linkedlist.delete(2)
+    print('===> LinkedList size:', linkedlist.size())
+
+    print('---------------------------------------------')
+
+    print('---------- TEST DOUBLY LINKED LIST ----------')
+
+    print('Initializing a new linked list...')
+    linkedlist = DoublyLinkedList()
+
+    print('Inserting 3 items in the initialized linked list...')
+    linkedlist.insert(1)
+    linkedlist.insert(2)
+    linkedlist.insert(3)
+
+    print('Finished inserting 3 elements... size of the linked list should be 3...')
+    print('===> LinkedList size:', linkedlist.size())
+
+    print('Searching for an item that exist in the linked list... ')
+    print('Search should return a NodeDouble object...')
+    print('===> Search returned:', linkedlist.search(2))
+
+    print('Getting the next and previous data of the nodes pointed by the searched item...')
+    print('===> Searched item: 2')
+    print('===> Next data (should be 1):', linkedlist.search(2).get_next().get_data())
+    print('===> Previous data (should be 3):', linkedlist.search(2).get_previous().get_data())
 
     print('Deleting two elements from the list... size of the linked list should now be 1...')
     linkedlist.delete(1)
