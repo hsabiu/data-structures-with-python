@@ -39,13 +39,13 @@ if __name__ == '__main__':
     print('New queue created...')
     print('')
 
-    print('Inserting 5 items (1-5) to the newly created queue...')
+    print('Inserting 5 elements (1-5) into the newly created queue...')
     queue.enqueue(1)
     queue.enqueue(2)
     queue.enqueue(3)
     queue.enqueue(4)
     queue.enqueue(5)
-    print('5 items inserted...')
+    print('5 elements inserted...')
     print('')
 
     print('Printing the front and rear of the queue')
@@ -53,7 +53,7 @@ if __name__ == '__main__':
     print('===> Rear (should be 5):', queue.rear())
     print('')
 
-    print('Removing 5 items from the queue in FIFO order')
+    print('Removing 5 elements from the queue in FIFO order')
     print('===>', queue.dequeue())
     print('===>', queue.dequeue())
     print('===>', queue.dequeue())

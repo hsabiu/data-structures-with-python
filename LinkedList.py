@@ -207,8 +207,8 @@ if __name__ == '__main__':
     print('===> Previous data (should be 5):', linkedlist.search(4).get_previous().get_data())
     print('')
 
-    print('Deleting 1 item from the list... size of the linked list should now be 4...')
-    print('===> Item to delete: 3')
+    print('Deleting 1 element from the list... size of the linked list should now be 4...')
+    print('===> Element to delete: 3')
     linkedlist.delete(3)
     print('===> LinkedList size:', linkedlist.size())
     print('')
