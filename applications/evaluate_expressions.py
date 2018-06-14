@@ -3,8 +3,9 @@ from implementations.Stack import LinkedListStack
 
 
 def evaluate_postfix(expression):
-    """A function to evaluate an expression represented in postfix notation
-    using Stack data structure"""
+    """Function to evaluate an expression represented in postfix
+    notation using stack data structure"""
+
     ops = {"+": operator.add, "-": operator.sub, "*": operator.mul, "/": operator.floordiv}
     stack = LinkedListStack()
 
@@ -23,8 +24,8 @@ def evaluate_postfix(expression):
 
 
 def evaluate_prefix(expression):
-    """A function to evaluate an expression represented in prefix notation
-    using Stack data structure"""
+    """A function to evaluate an expression represented in prefix
+    notation using Stack data structure"""
     ops = {"+": operator.add, "-": operator.sub, "*": operator.mul, "/": operator.floordiv}
     stack = LinkedListStack()
 
