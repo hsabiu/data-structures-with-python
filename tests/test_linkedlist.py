@@ -1,5 +1,5 @@
 import unittest
-from LinkedList import SinglyLinkedList, DoublyLinkedList
+from implementations.LinkedList import SinglyLinkedList, DoublyLinkedList
 
 
 class TestSinglyLinkList(unittest.TestCase):

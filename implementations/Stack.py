@@ -1,5 +1,5 @@
 # Python implementation of a Stack data structure
-from LinkedList import SinglyLinkedList
+from implementations.LinkedList import SinglyLinkedList
 
 
 class ArrayStack:

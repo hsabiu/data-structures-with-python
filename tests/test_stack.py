@@ -1,5 +1,5 @@
 import unittest
-from Stack import ArrayStack, LinkedListStack
+from implementations.Stack import ArrayStack, LinkedListStack
 
 
 class TestArrayStack(unittest.TestCase):
