@@ -2,6 +2,8 @@ from implementations.Stack import LinkedListStack
 
 
 def convert_to_postfix(infix_expr):
+    """Convert expressions from infix to postfix using stack"""
+
     stack = LinkedListStack()
 
     precedence = {'+': 1, '-': 1, '*': 2, '/': 2}
