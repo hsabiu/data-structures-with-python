@@ -6,7 +6,7 @@ def parse_parentheses(expression):
 
     stack = LinkedListStack()
     expression = expression.split(" ")
-    parentheses = {")": "(", "}":"{", "]":"["}
+    parentheses = {")": "(", "}": "{", "]": "["}
 
     for ch in expression:
         if ch in ["(", "{", "["]:
@@ -27,3 +27,11 @@ if __name__ == '__main__':
 
     print("Incorrect parenthesis, should return False...")
     print("===> Function call return:", parse_parentheses("{ ( [ ) ] ) }"))
+    print("")
+
+    print("Expression with correct parenthesis, should return True...")
+    print("===> Function call return:", parse_parentheses("( 2 + ( ( 3 + 4 ) * ( 5 * 6 ) ) )"))
+    print("")
+
+    print("Expression with incorrect parenthesis, should return False...")
+    print("===> Function call return:", parse_parentheses("( 2 + ( ( 3 + 4 ( * ( 5 * 6 ) ) )"))
