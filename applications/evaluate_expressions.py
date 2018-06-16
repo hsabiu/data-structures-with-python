@@ -6,15 +6,15 @@ def evaluate_postfix(expression):
     """Function to evaluate an expression represented in postfix
     notation using stack data structure"""
 
-    ops = {"+": operator.add, "-": operator.sub, "*": operator.mul, "/": operator.floordiv}
+    ops = {"+": operator.add, "-": operator.sub, "*": operator.mul, "/": operator.truediv}
     stack = LinkedListStack()
 
     expression = expression.split(" ")
 
     for ch in expression:
         if ch in ["+", "-", "*", "/"]:
-            first_operand = stack.pop()
             second_operand = stack.pop()
+            first_operand = stack.pop()
             op_result = ops[ch](float(first_operand), float(second_operand))
             stack.push(op_result)
         else:
@@ -52,3 +52,4 @@ if __name__ == '__main__':
     prefix_notation = "+ + 1 2 + 3 4"
     prefix_evaluation_result = evaluate_prefix(prefix_notation)
     print(f"The postfix expression: {prefix_notation} = ", prefix_evaluation_result)
+
