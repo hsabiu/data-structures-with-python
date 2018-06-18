@@ -19,7 +19,7 @@ def convert_base(numb, base):
 
 
 if __name__ == '__main__':
-    decimal_number = 256
+    decimal_number = 25
     binary_number = convert_base(decimal_number, 2)
     octal_number = convert_base(decimal_number, 8)
     hexadecimal_number = convert_base(decimal_number, 16)
