@@ -43,6 +43,9 @@ class TestQueue(unittest.TestCase):
     def test_rear(self):
         self.assertEqual(self.queue.rear(), 3)
 
+    def test_size(self):
+        self.assertEqual(self.queue.size(), 3)
+
     def test_is_empty(self):
         self.queue.dequeue()
         self.queue.dequeue()

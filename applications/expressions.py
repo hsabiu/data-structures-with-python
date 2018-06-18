@@ -15,10 +15,10 @@ def evaluate_postfix(expression):
         if ch in ["+", "-", "*", "/"]:
             second_operand = stack.pop()
             first_operand = stack.pop()
-            op_result = ops[ch](float(first_operand), float(second_operand))
+            op_result = ops[ch](first_operand, second_operand)
             stack.push(op_result)
         else:
-            stack.push(ch)
+            stack.push(float(ch))
 
     return stack.peek()
 
@@ -35,10 +35,10 @@ def evaluate_prefix(expression):
         if ch in ["+", "-", "*", "/"]:
             first_operand = stack.pop()
             second_operand = stack.pop()
-            op_result = ops[ch](float(first_operand), float(second_operand))
+            op_result = ops[ch](first_operand, second_operand)
             stack.push(op_result)
         else:
-            stack.push(ch)
+            stack.push(float(ch))
 
     return stack.peek()
 
@@ -51,5 +51,6 @@ if __name__ == '__main__':
 
     prefix_notation = "+ + 1 2 + 3 4"
     prefix_evaluation_result = evaluate_prefix(prefix_notation)
-    print(f"The postfix expression: {prefix_notation} = ", prefix_evaluation_result)
+    print(f"The prefix expression: {prefix_notation} = ", prefix_evaluation_result)
+
 

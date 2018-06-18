@@ -26,6 +26,10 @@ class Queue:
         """Return the item at the back (rear) of the queue"""
         return self.queue[0]
 
+    def size(self):
+        """Return the number of items in the queue"""
+        return len(self.queue)
+
     def is_empty(self):
         """Check if the queue is empty"""
         return len(self.queue) == 0
@@ -49,6 +53,10 @@ if __name__ == '__main__':
     print('')
 
     print('Printing the front and rear of the queue')
+    print('===> Items in queue (should be 5):', queue.size())
+    print('')
+
+    print('Printing the number of items in the queue')
     print('===> Front (should be 1):', queue.front())
     print('===> Rear (should be 5):', queue.rear())
     print('')
